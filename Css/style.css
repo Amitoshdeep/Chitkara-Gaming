@@ -113,7 +113,8 @@
         margin-bottom: 20px;
     }
     .gameCard img {
-        height: 30vh;
+        height: auto;
+        width: 100%;
     }
 }
 
@@ -126,6 +127,7 @@
         padding: 10px;
     }
     .gameCard img {
-        height: 25vh;
+        height: auto;
+        width: 100%;
     }
 }

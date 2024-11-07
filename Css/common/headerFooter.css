@@ -105,6 +105,11 @@
 
 /* Responsive Design for Footer */
 @media (max-width: 786px) {
+    .nav{
+        flex-direction: column;
+        height: 100px;
+    }
+    
     .footer {
         padding: 20px;
     }
