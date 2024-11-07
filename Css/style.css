@@ -77,6 +77,27 @@ body {
     width: 20%; /* Adjust the length of the line */
 }
 
+.seemore {
+    background-color: #fbde44ff;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    width: 140px;
+    height: 60px;
+    align-self: flex-end;
+    margin: 0px 30px 10px 0px;
+    box-shadow: 0px 0px 10px black;
+}
+
+.seemore a{
+    color: black;
+    text-decoration: none;
+}
+
+.seemore:hover{
+    font-size: 22px;
+    text-decoration: underline;
+}
 
 /* Media query for tablets and smaller screens */
 @media (max-width: 1024px) {
