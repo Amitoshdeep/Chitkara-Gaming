@@ -1,0 +1,121 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Container for the image */
+.main {
+    width: 100vw; /* Full viewport width */
+    overflow: hidden; /* Hide any overflow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    color: white;
+    background-color: #f65058ff;
+    cursor: default;
+}
+
+.topImg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    margin: 20px 0px 50px 0px;
+}
+
+.topImg img {
+    width: 100%;
+    object-fit: contain;
+    align-self: center;
+}
+
+.cards {
+    padding-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: auto; /* Adjusts dynamically */
+    text-align: center;
+    color: black;
+}
+
+.imgCon {
+    flex-wrap: wrap;
+    padding: 20px;
+    border: 2px solid black;
+    height: auto; /* Dynamically adjusts to content */
+    box-shadow: 0px 0px 20px black;
+    background-color: #fbde44ff;
+    width: 25%;
+    margin-bottom: 20px; /* Adds spacing between rows if necessary */
+}
+
+/* Adjust image container for smaller screens */
+.imgCon img {
+    object-fit: contain;
+    max-height: 100%; /* Limits image height to container */
+    width: 100%;
+    height: 40vh;
+    margin-bottom: 10px; /* Optional for spacing between image and text */
+}
+
+.strike {
+    position: relative;
+    font-weight: bold;
+}
+
+.strike::after {
+    content: '';
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%); /* Center align the line */
+    border-top: 3px solid black; /* Adjust the thickness of the line */
+    width: 20%; /* Adjust the length of the line */
+}
+
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 1024px) {
+    .imgCon {
+        width: 45%; /* Increases image container width for medium screens */
+    }
+}
+
+@media (max-width: 786px) {
+    .topImg {
+        height: 50vh;
+        margin: 0;
+    }
+    
+    .cards {
+        padding-top: 20px;
+    }
+    
+    .imgCon {
+        width: 90%; /* Expands to almost full width on small screens */
+        margin-bottom: 20px;
+    }
+    
+    .imgCon img {
+        height: 30vh; /* Scales image height down on small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .topImg {
+        height: 40vh; /* Reduces height for very small screens */
+    }
+    
+    .imgCon {
+        width: 100%; /* Full width on extra small screens */
+        padding: 10px;
+    }
+    
+    .imgCon img {
+        height: 25vh; /* Further reduce image height */
+    }
+}

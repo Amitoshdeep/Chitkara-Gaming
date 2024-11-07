@@ -1,0 +1,75 @@
+.nav {
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #28334AFF;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    color: white;
+    cursor: default;
+    z-index: 1000; /* MOST IMPORTANNTT TO STOP OVERLAPP */
+}
+
+.nav ul {
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Added margin: 0 to remove any default margin from ul */
+}
+
+
+.nav ul li a {
+    /* background-color: red; */
+    align-content: center;
+    text-decoration: none;
+    display: inline-block; /* Ensures the text inside the <a> behaves well on hover */
+    transition: color 0.3s ease; /* Smooth transition for link color change */
+    padding: 15px;
+    height: 40px; 
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    color: white;
+}
+
+.nav ul li:hover {
+    font-size: 20px; 
+    text-decoration: underline;
+    transform: scale(1.1); /* Added scale effect to emphasize hover */
+}
+
+.nav ul li a:hover {
+    color: #f65058ff; /* Optional: Change color on hover to indicate interaction */
+}
+
+.footer{
+    padding: 0px 0px 0px 30px;
+    
+    background-color: #28334AFF;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.top h3 {
+    text-align: center;
+}
+
+.top{
+    padding: 10px 0 20px 0px;
+}
+
+.top ol ul {
+    padding: 0px 20px 0px 20px;
+}
+
+@media (max-width: 786px){
+    .nav{
+        flex-direction: column;
+        height: 100px;
+    }
+}
