@@ -1,78 +1,75 @@
-/* Container for the image */
+/* Container for the main section */
 .main {
-    width: 100vw; /* Full viewport width */
-    overflow: hidden; /* Hide any overflow */
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    height: auto;
-    color: white;
-    background-color: #fbde44ff;
+    align-items: center;
+    /* background-color: #fbde44ff; */
     cursor: default;
 }
 
+/* Top Image Container */
 .topImg {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    width: 100vw;
-    margin: 20px 0px 50px 0px;
+    height: 80vh; /* Adjusted height for improved layout */
+    width: 100%;
+    margin: 20px 0 50px 0;
+    overflow: hidden; /* Hide overflow for cleaner look */
 }
 
 .topImg img {
     width: 100%;
     object-fit: contain;
-    align-self: center;
+    border-radius: 8px; /* Soft rounded corners */
 }
 
+/* Cards Container */
 .cards {
-    padding-top: 40px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    height: auto; /* Adjusts dynamically */
+    width: 100%;
     text-align: center;
-    color: black;
+    padding-top: 40px;
 }
 
+/* Individual Game Card Styling */
 .gameCard {
-    flex-wrap: wrap;
-    padding: 20px;
-    border: 2px solid black;
-    height: auto; /* Dynamically adjusts to content */
-    box-shadow: 0px 0px 20px black;
     background-color: white;
-    width: 25%;
-    margin-bottom: 20px; /* Adds spacing between rows if necessary */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
+    width: 22%; /* Matches original styling width */
+    margin-bottom: 20px;
 }
 
-/* Adjust image container for smaller screens */
+.gameCard:hover {
+    transform: translateY(-5px);
+}
+
 .gameCard img {
-    object-fit: contain;
-    max-height: 100%; /* Limits image height to container */
     width: 100%;
     height: 40vh;
-    margin-bottom: 10px; /* Optional for spacing between image and text */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
 }
 
+/* Price Strike-through Styling */
 .strike {
-    position: relative;
-    font-weight: bold;
-    color: rgb(85, 81, 81);
+    text-decoration: line-through;
+    color: #a3a3a3;
 }
 
-.strike::after {
-    content: '';
-    position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translateX(-50%); /* Center align the line */
-    border-top: 3px solid black; /* Adjust the thickness of the line */
-    width: 100%; /* Adjust the length of the line */
-    color: rgb(90, 76, 76);
-}
-
+/* See More Button */
 .seemore {
     background-color: white;
     color: black;
@@ -80,59 +77,55 @@
     font-weight: bold;
     width: 180px;
     height: 60px;
-    align-self: flex-end;
-    margin: 0px 30px 10px 0px;
+    align-self: center;
+    margin-top: 20px;
     box-shadow: 0px 0px 10px black;
+    transition: font-size 0.2s, box-shadow 0.2s;
 }
 
-.seemore a{
+.seemore a {
     color: black;
     text-decoration: none;
 }
 
-.seemore:hover{
+.seemore:hover {
     font-size: 22px;
     text-decoration: underline;
+    box-shadow: 0px 0px 15px #333;
 }
 
-/* Media query for tablets and smaller screens */
+/* Responsive Design */
 @media (max-width: 1024px) {
     .gameCard {
-        width: 45%; /* Increases image container width for medium screens */
+        width: 45%; /* Adjusted for medium screens */
     }
 }
 
 @media (max-width: 786px) {
     .topImg {
         height: 50vh;
-        margin: 0;
     }
-    
     .cards {
         padding-top: 20px;
     }
-    
     .gameCard {
-        width: 90%; /* Expands to almost full width on small screens */
+        width: 90%;
         margin-bottom: 20px;
     }
-    
     .gameCard img {
-        height: 30vh; /* Scales image height down on small screens */
+        height: 30vh;
     }
 }
 
 @media (max-width: 576px) {
     .topImg {
-        height: 40vh; /* Reduces height for very small screens */
+        height: 40vh;
     }
-    
     .gameCard {
-        width: 100%; /* Full width on extra small screens */
+        width: 100%;
         padding: 10px;
     }
-    
     .gameCard img {
-        height: 25vh; /* Further reduce image height */
+        height: 25vh;
     }
 }

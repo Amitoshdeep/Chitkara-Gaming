@@ -1,15 +1,16 @@
+/* Navigation Bar Styling */
 .nav {
     padding: 7px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #28334AFF;
+    background-color: #28334aff;
     position: sticky;
     top: 0;
     height: 60px;
     color: white;
     cursor: default;
-    z-index: 1000; /* MOST IMPORTANNTT TO STOP OVERLAPP */
+    z-index: 1000;
 }
 
 .nav ul {
@@ -17,59 +18,103 @@
     display: flex;
     list-style-type: none;
     padding: 0;
-    margin: 0; /* Added margin: 0 to remove any default margin from ul */
+    margin: 0;
 }
 
-
 .nav ul li a {
-    /* background-color: red; */
     align-content: center;
     text-decoration: none;
-    display: inline-block; /* Ensures the text inside the <a> behaves well on hover */
-    transition: color 0.3s ease; /* Smooth transition for link color change */
+    display: inline-block;
+    transition: color 0.3s ease;
     padding: 15px;
-    height: 40px; 
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    height: 40px;
+    transition: all 0.3s ease;
     color: white;
 }
 
 .nav ul li:hover {
-    font-size: 20px; 
+    font-size: 20px;
     text-decoration: underline;
-    transform: scale(1.1); /* Added scale effect to emphasize hover */
+    transform: scale(1.1);
 }
 
 .nav ul li a:hover {
-    color: #f65058ff; /* Optional: Change color on hover to indicate interaction */
+    color: #f65058ff;
 }
 
-.footer{
-    padding: 0px 0px 0px 30px;
-    
-    background-color: #28334AFF;
+/* Footer Styling */
+.footer {
+    padding: 30px 0;
+    background-color: #28334a;
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-}
-
-.top h3 {
     text-align: center;
+    font-size: 0.9em; /* Slightly smaller text for the footer */
+    margin-top: 20px;
 }
 
-.top{
-    padding: 10px 0 20px 0px;
+.footer .top {
+    padding: 10px 0 20px 0;
 }
 
-.top ol ul {
-    padding: 0px 20px 0px 20px;
+.footer .top h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #f65058; /* Soft red for the title */
 }
 
-@media (max-width: 786px){
-    .nav{
-        flex-direction: column;
-        height: 100px;
+.footer .top ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.footer .top ol ul {
+    padding: 0 20px;
+    margin-bottom: 15px;
+    list-style-type: none;
+}
+
+.footer .top ol ul li {
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.footer .top ol ul li:hover {
+    transform: scale(1.05); /* Slight scaling effect */
+    color: #f65058;
+}
+
+.footer .bottom {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #aaa;
+}
+
+.footer .bottom a {
+    color: #f65058;
+    text-decoration: none;
+}
+
+.footer .bottom a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design for Footer */
+@media (max-width: 786px) {
+    .footer {
+        padding: 20px;
+    }
+
+    .footer .top h3 {
+        font-size: 1.2em; /* Adjust the header size for mobile */
+    }
+
+    .footer .top ol ul {
+        padding: 0;
+        text-align: center;
     }
 }
