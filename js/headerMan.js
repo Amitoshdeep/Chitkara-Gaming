@@ -5,8 +5,8 @@ class SpecialHeader extends HTMLElement{
         <h1 class="title">CHITKARA-GAMING<br></h1>    
             <ul>
                 <li><a href="/index.html">HOME</a></li>
-                <li><a href="">CONTACT US</a></li>
-                <li><a href="">HELP</a></li>
+                <li><a href="/pages/contact us.html">CONTACT US</a></li>
+                <li><a href="/pages/help.html">HELP</a></li>
             </ul>
         </div>
         `

@@ -1,9 +1,3 @@
-body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
 /* Container for the image */
 .main {
     width: 100vw; /* Full viewport width */
@@ -13,7 +7,7 @@ body {
     justify-content: center;
     height: auto;
     color: white;
-    background-color: #f65058ff;
+    background-color: #fbde44ff;
     cursor: default;
 }
 
@@ -42,19 +36,19 @@ body {
     color: black;
 }
 
-.imgCon {
+.gameCard {
     flex-wrap: wrap;
     padding: 20px;
     border: 2px solid black;
     height: auto; /* Dynamically adjusts to content */
     box-shadow: 0px 0px 20px black;
-    background-color: #fbde44ff;
+    background-color: white;
     width: 25%;
     margin-bottom: 20px; /* Adds spacing between rows if necessary */
 }
 
 /* Adjust image container for smaller screens */
-.imgCon img {
+.gameCard img {
     object-fit: contain;
     max-height: 100%; /* Limits image height to container */
     width: 100%;
@@ -65,6 +59,7 @@ body {
 .strike {
     position: relative;
     font-weight: bold;
+    color: rgb(85, 81, 81);
 }
 
 .strike::after {
@@ -74,15 +69,16 @@ body {
     left: 50%;
     transform: translateX(-50%); /* Center align the line */
     border-top: 3px solid black; /* Adjust the thickness of the line */
-    width: 20%; /* Adjust the length of the line */
+    width: 100%; /* Adjust the length of the line */
+    color: rgb(90, 76, 76);
 }
 
 .seemore {
-    background-color: #fbde44ff;
+    background-color: white;
     color: black;
     font-size: 20px;
     font-weight: bold;
-    width: 140px;
+    width: 180px;
     height: 60px;
     align-self: flex-end;
     margin: 0px 30px 10px 0px;
@@ -101,7 +97,7 @@ body {
 
 /* Media query for tablets and smaller screens */
 @media (max-width: 1024px) {
-    .imgCon {
+    .gameCard {
         width: 45%; /* Increases image container width for medium screens */
     }
 }
@@ -116,12 +112,12 @@ body {
         padding-top: 20px;
     }
     
-    .imgCon {
+    .gameCard {
         width: 90%; /* Expands to almost full width on small screens */
         margin-bottom: 20px;
     }
     
-    .imgCon img {
+    .gameCard img {
         height: 30vh; /* Scales image height down on small screens */
     }
 }
@@ -131,12 +127,12 @@ body {
         height: 40vh; /* Reduces height for very small screens */
     }
     
-    .imgCon {
+    .gameCard {
         width: 100%; /* Full width on extra small screens */
         padding: 10px;
     }
     
-    .imgCon img {
+    .gameCard img {
         height: 25vh; /* Further reduce image height */
     }
 }
