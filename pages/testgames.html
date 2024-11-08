@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Games | Chitkara Gaming</title>
+    <!-- JS and CSS Links -->
+    <script src="/js/headerMan.js"></script>
+    <link rel="stylesheet" href="/Css/seeAll.css">
+    <link rel="stylesheet" href="/Css/common/0mar.css">
+    <link rel="stylesheet" href="/Css/common/headerFooter.css">
+    <link rel="stylesheet" href="/Css/allGames.css">
+    <!-- FAV ICO LINK -->
+    <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <special-header></special-header>
+    
+    <div class="main">
+        <!-- Search Bar -->
+        <div class="searchBar">
+            <input type="text" id="searchInput" placeholder="Search games..." onkeyup="searchGames()">
+            <button onclick="searchGames()">Search</button>
+        </div>
+
+        <!-- Games List in Ascending Order -->
+        <div class="gamesList" id="gamesList"></div>
+    </div>
+
+    <special-footer></special-footer>
+
+    <!-- JavaScript for Sorting and Search -->
+
+    <script>
+            // Function to fetch the game data from the JSON file
+        async function fetchGamesData() {
+            try {
+                const response = await fetch('/js/games.json'); // Specify the correct path to the JSON file
+                const games = await response.json();
+                renderGames(games); // Pass the data to render the games
+            } catch (error) {
+                console.error('Error fetching the game data:', error);
+            }
+        }
+
+        // Function to render the games list
+        function renderGames(games) {
+            const gamesList = document.getElementById('gamesList');
+            gamesList.innerHTML = ''; // Clear current list
+
+            games.forEach(game => {
+                const gameCard = document.createElement('div');
+                gameCard.classList.add('gameCard');
+
+                gameCard.innerHTML = `
+                    <img src="${game.image}" alt="${game.title}">
+                    <figcaption><h2>${game.title}</h2></figcaption>
+                    <h3>Price: <span class="strike">${game.originalPrice} Rs.</span> ${game.discountedPrice} Rs.</h3>
+                `;
+                
+                gamesList.appendChild(gameCard);
+            });
+        }
+
+        // Function to sort games in ascending order
+        function sortGames(games) {
+            const sortedGames = [...games].sort((a, b) => a.title.localeCompare(b.title));
+            renderGames(sortedGames);
+        }
+
+        // Function to filter games by search input
+        function searchGames() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const gameCards = document.querySelectorAll('.gameCard');
+            gameCards.forEach(card => {
+                const title = card.querySelector('figcaption h2').textContent.toLowerCase();
+                card.style.display = title.includes(input) ? 'block' : 'none';
+            });
+        }
+
+        // Fetch the games data when the page loads
+        window.onload = fetchGamesData;
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+[
+    {
+        "title": "Grand Theft Auto V",
+        "image": "https://media.rockstargames.com/rockstargames/img/global/news/upload/actual_1364906194.jpg",
+        "originalPrice": 3000,
+        "discountedPrice": 800
+    },
+    {
+        "title": "Cyberpunk 2077",
+        "image": "https://i.redd.it/3jbxpsgev8461.png",
+        "originalPrice": 1500,
+        "discountedPrice": 750
+    },
+    {
+        "title": "Red Dead Redemption",
+        "image": "https://i.redd.it/which-cover-art-do-you-prefer-v0-e5776n5rw1ka1.jpg?width=853&format=pjpg&auto=webp&s=e27948516442fa4f860e23ed1d7dc1631f1ab6bb",
+        "originalPrice": 3800,
+        "discountedPrice": 1000
+    },
+    {
+        "title": "Red Dead Redemption II",
+        "image": "https://upload.wikimedia.org/wikipedia/en/4/44/Red_Dead_Redemption_II.jpg",
+        "originalPrice": 5000,
+        "discountedPrice": 1500
+    },
+    {
+        "title": "Elden Ring",
+        "image": "https://www.cnet.com/a/img/resize/43bf7152f39f90a03df23c97a8a7ebb9a09ea520/hub/2022/02/23/f12a8db7-d99b-4b8d-9b09-d84f12661cf7/elden-ring-plakat.jpg?auto=webp&fit=bounds&height=1200&precrop=571,571,x357,y149&width=1200",
+        "originalPrice": 700,
+        "discountedPrice": 700
+    },
+    {
+        "title": "Forza Horizon 5",
+        "image": "https://theouterhaven.b-cdn.net/wp-content/uploads/2021/08/E4HHJZkXMAswau7.jpg",
+        "originalPrice": 650,
+        "discountedPrice": 650
+    },
+    {
+        "title": "Prototype 2",
+        "image": "https://upload.wikimedia.org/wikipedia/en/f/fb/Prototype_2_game.jpg",
+        "originalPrice": 850,
+        "discountedPrice": 850
+    },
+    {
+        "title": "Death Stranding",
+        "image": "https://pbs.twimg.com/media/Eb1ScUQU8AAAqpw.jpg",
+        "originalPrice": 1600,
+        "discountedPrice": 1100
+    },
+    {
+        "title": "God Of War: 2018",
+        "image": "https://m.media-amazon.com/images/M/MV5BNjJiNTFhY2QtNzZkYi00MDNiLWEzNGEtNWE1NzBkOWIxNmY5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg",
+        "originalPrice": 3300,
+        "discountedPrice": 2200
+    }
+]
