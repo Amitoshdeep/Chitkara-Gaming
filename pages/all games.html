@@ -86,15 +86,35 @@
 
     <!-- JavaScript for Sorting and Search -->
     <script>
-        // Function to filter games by search input
-        function searchGames() {
-            const input = document.getElementById('searchInput').value.toLowerCase();
-            const gameCards = document.querySelectorAll('.gameCard');
-            gameCards.forEach(card => {
-                const title = card.querySelector('figcaption h2').textContent.toLowerCase();
-                card.style.display = title.includes(input) ? 'block' : 'none';
-            });
-        }
+        // Function to sort games in ascending order
+    function sortGames() {
+        const gamesList = document.querySelector('.gamesList');
+        const gameCards = Array.from(gamesList.children);
+
+        // Sort the game cards alphabetically based on their titles
+        gameCards.sort((a, b) => {
+            const titleA = a.querySelector('figcaption h2').textContent.toLowerCase();
+            const titleB = b.querySelector('figcaption h2').textContent.toLowerCase();
+            return titleA.localeCompare(titleB);
+        });
+
+        // Clear the current list and re-append the sorted cards
+        gamesList.innerHTML = '';
+        gameCards.forEach(card => gamesList.appendChild(card));
+    }
+
+    // Function to filter games by search input
+    function searchGames() {
+        const input = document.getElementById('searchInput').value.toLowerCase();
+        const gameCards = document.querySelectorAll('.gameCard');
+        gameCards.forEach(card => {
+            const title = card.querySelector('figcaption h2').textContent.toLowerCase();
+            card.style.display = title.includes(input) ? 'block' : 'none';
+        });
+    }
+
+    // Automatically sort games on page load
+    window.onload = sortGames;
     </script>
 </body>
 </html>

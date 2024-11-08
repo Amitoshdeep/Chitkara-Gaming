@@ -63,9 +63,11 @@
     transform: translateY(-5px);
 }
 
+/* Game Card Image Styling - Ensuring Consistent Height */
 .gameCard img {
     width: 100%;
-    height: auto;
+    height: 300px; /* Set a fixed height */
+    object-fit: cover; /* Ensures images fill the area while keeping aspect ratio */
     border-radius: 4px;
     margin-bottom: 10px;
 }
