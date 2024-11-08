@@ -88,3 +88,9 @@
     text-decoration: line-through;
     color: #a3a3a3;
 }
+
+@media (max-width:466px){
+    .gameCard img{
+        height: 540px;
+    }
+}
